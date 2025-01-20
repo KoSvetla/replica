@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Open+Sans:wght@400;700&display=swap');
+
+/*--Общие стили--*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Raleway", sans-serif;
+    background-color:#F5F5F5;
+    font-weight: 400;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #2C2D35;
+  }
+  a:hover {
+    opacity: 0.5;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .container {
+    box-sizing: border-box; 
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-weight: 400;
+  }
+/*--Шапка--*/
+.header {
+    background-color:#E1EDE6;
+    padding: 33px;
+}
+.header .container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_nav {
+  margin-left: 500px;
+    
+}
+.header_list {
+    display: flex;
+    gap: 60px;
+
+}
+/*--Приветственная секкция--*/
+
+.welcome .container {
+  display: flex;
+}
+.welcome_text {
+  max-width: 540px;
+  max-height: 331px;
+  padding-top: 145px;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 110%;
+}
+
+.highlight {
+  color: #598D66;
+}
+
+.welcome_offer {
+  font-size: 18px;
+  line-height: 150%;
+  color: #86928B;
+  padding-top: 20px;
+}
+
+.btn {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  height: 65px;
+  width: 227px;
+
+  border-color: #598D66;
+  border: 2px solid;
+  color: #86928B;
+
+  font-size: 20px;
+
+}
+
+/*--Репродукции --*/
+
+.reproduction-menu {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.reproduction-name {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 110%;
+}
+.reproduction-country {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.reproduction-france {
+  background-color: #376B44;
+
+  padding: 10px 20px;
+  border-radius: 25px;
+  
+  color: #F4F6F5;
+}
+.reproduction-germany {
+  background-color: #D4E8D9;
+  padding: 10px 20px;
+  border-radius: 25px;
+
+
+}
+.reproduction-england {
+  background-color: #D4E8D9;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+
+.reproduction-start {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.reproduction-card {
+  overflow: hidden;
+  width: 350px;
+  background-color: #E1EDE6;
+}
+
+.reproduction-card img {
+ width: 310px;
+ padding: 20px;
+}
+
+.reproduction-catd_text-wrapper {
+  padding: 0px 20px 20px 20px;
+  
+
+}
+.reproduction-autor {
+  color: #86928B;
+  font-size: 18px;
+  margin-bottom: 10px;
+  
+
+}
+.reproduction-name {
+  font-size: 30px;
+  margin-bottom: 8px;
+
+}
+.reproduction-characteristic {
+  font-size: 18px;
+  padding-bottom: 30px;
+  color: #2C2D35;
+  
+
+}
+.reproduction-price {
+  color: #598D66;
+  font-size: 24px;
+
+}
+
+.btn-by {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 310px;
+  height: 65px;
+
+  border-color: #598D66;
+  border: 2px solid;
+  
+
+  font-size: 20px;
+  color: #598D66;
+}
+
+/*--Новая коллекция--*/
+
+.collection {
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  background-image: url(./otherpicture/new_collection.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin-top: 70px;
+
+}
+
+.collection-wrapper {
+  width: 540px;
+  padding-top: 70px;
+  color: #F4F6F5;
+  
+}
+
+.collection-star {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  padding-bottom: 20px;
+
+}
+
+.collection-star_subtitle1 {
+  font-size: 18px;
+  line-height: 150%;
+  padding-bottom: 20px;
+}
+
+.btn-know {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  
+  width: 257px;
+  height: 65px;
+
+  background-color: #EEDB6D;
+
+  font-size: 20px;
+  color: #2C2D35;
+
+}
+
+/*Наша команда*/
+.team {
+  margin-top: 70px;
+  height: auto;
+
+}
+.team .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.team-text {
+  width: 635px;
+  height: 272px;
+  margin-left: 30px;
+}
+.team-text_title {
+  font-size: 60px;
+  }
+  .team-text_about {
+    margin-top: 20px;
+    font-size: 18px;
+    width: 635px;
+    height: 108px;
+  }
+.team-text_photo {
+  height: auto;
+  width: auto;
+}
+
+/*Наша команда*/
+.footer {
+background-color: #E1EDE6;
+margin-top: 70px;
+
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 23px;
+}
+
+
+.footer-contacts h3 {
+  margin-top: 35px;
+  font-style: oblique;
+  font-size: 20px;
+  color:#2C2D35;
+}
+
+
+
+.footer li  {
+  margin-top: 7px;
+  
+}
+
+.footer-nav__list {
+  display: flex;
+  gap: 60px;
+  font-size: 20px;
+}
+
+
+
+.footer-social p {
+  font-size: 12px;
+  color:#86928B;
+  margin-top: 6px;
+}
+
+.footer-list__item {
+  font-size: 18px;
+  color:#86928B;
+}
+/* 
+Адаптация, которой еще нет, но я скоро разберусь
+  */
