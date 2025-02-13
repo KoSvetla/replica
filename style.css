@@ -1,23 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Open+Sans:wght@400;700&display=swap');
 
-/*--Общие стили--*/
+ /*--Общие стили--  */
 * {
     margin: 0;
-    padding: 0;
+    padding: 0; 
   }
   
   body {
     font-family: "Raleway", sans-serif;
     background-color:#F5F5F5;
-    font-weight: 400;
+    font-weight: 500;  
   }
   
   a {
     text-decoration: none;
     color: #2C2D35;
-  }
-  a:hover {
-    opacity: 0.5;
   }
 
   ul {
@@ -35,39 +32,68 @@
     margin-right: auto;
 
   }
-
+ 
   h1, h2, h3, h4, h5 {
     font-weight: 400;
   }
+
 /*--Шапка--*/
 .header {
-    background-color:#E1EDE6;
-    padding: 33px;
+  background-color:#E1EDE6;
+  padding: 33px;
 }
 .header .container { 
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 0.8fr 2fr 0.3fr;
     align-items: center;
+}
+.dropdown {
+  display: none;
 }
 
 .header_nav {
-  margin-left: 500px;
-    
+  justify-self: end;
 }
-.header_list {
-    display: flex;
-    gap: 60px;
+
+.image-button {
+  background-image: url(./icons/basket1.png);
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-size: cover;
+  justify-self: end;
 
 }
-/*--Приветственная секкция--*/
+
+
+.header_list a:hover, .footer a:hover {
+color: #598D66;
+}
+
+.header_list a:active {
+  background-color: #D4E8D9;
+  color: #2C2D35;
+  }
+
+.header_list {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  gap: 60px;
+}
+/*--Приветственная секкция-*/
 
 .welcome .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
 }
 .welcome_text {
-  max-width: 540px;
-  max-height: 331px;
-  padding-top: 145px;
+margin: auto;
+max-height: 331px;
+ 
 }
 
 h1 {
@@ -99,15 +125,20 @@ h1 {
   color: #86928B;
 
   font-size: 20px;
+}
 
+.btn:hover {
+  background-color: #598D66;
+  border-color: #598D66;
+  border: 2px solid;
+  color: #F4F6F5;
 }
 
 /*--Репродукции --*/
 
 .reproduction-menu {
-  display: flex;
-  justify-content: space-between;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin-bottom: 30px;
 }
 
@@ -115,80 +146,75 @@ h1 {
   font-size: 40px;
   font-weight: 400;
   line-height: 110%;
+
 }
 .reproduction-country {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: end;
+  gap: 32px;
+  
 }
 
-.reproduction-france {
-  background-color: #376B44;
-
+.reproduction-btn {
+  background-color: #D4E8D9;
   padding: 10px 20px;
+  border: 1px #D4E8D9;
   border-radius: 25px;
-  
+}
+.reproduction-btn:hover {
+  background-color: #598D66;
+  border: 1px #598D66;
   color: #F4F6F5;
 }
-.reproduction-germany {
-  background-color: #D4E8D9;
-  padding: 10px 20px;
-  border-radius: 25px;
-
-
+.activebtn {
+  background-color: #598D66;
+  border: 1px #598D66;
+  color: #F4F6F5;
 }
-.reproduction-england {
-  background-color: #D4E8D9;
-  padding: 10px 20px;
-  border-radius: 25px;
+.gallery {
+  display: none; 
 }
-
-
-.reproduction-start {
-  display: flex;
-  justify-content: space-between;
+.active {
+  display: grid;
   gap: 30px;
-  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr 1fr;
+
 }
+
 .reproduction-card {
-  overflow: hidden;
-  width: 350px;
+  display: grid;
+  max-width: 100%;
   background-color: #E1EDE6;
+
 }
 
 .reproduction-card img {
- width: 310px;
- padding: 20px;
-}
+  margin: 20px;
+ max-width: 100%;
 
+
+} 
 .reproduction-catd_text-wrapper {
-  padding: 0px 20px 20px 20px;
-  
-
+  padding: 0 20px 20px 20px;
 }
 .reproduction-autor {
   color: #86928B;
   font-size: 18px;
-  margin-bottom: 10px;
-  
-
+  padding-bottom: 10px;
 }
 .reproduction-name {
   font-size: 30px;
   margin-bottom: 8px;
-
 }
 .reproduction-characteristic {
   font-size: 18px;
   padding-bottom: 30px;
   color: #2C2D35;
-  
-
 }
 .reproduction-price {
   color: #598D66;
   font-size: 24px;
-
 }
 
 .btn-by {
@@ -196,7 +222,7 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  width: 310px;
+  max-width: 310px;
   height: 65px;
 
   border-color: #598D66;
@@ -211,22 +237,20 @@ h1 {
 
 .collection {
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: auto;  
 
   background-image: url(./otherpicture/new_collection.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   margin-top: 70px;
-
+  padding-bottom: 70px;
 }
 
 .collection-wrapper {
-  width: 540px;
+  max-width: 540px;
   padding-top: 70px;
   color: #F4F6F5;
-  
 }
 
 .collection-star {
@@ -259,51 +283,86 @@ h1 {
 
 }
 
-/*Наша команда*/
+/*Наша команда-*/
 .team {
   margin-top: 70px;
   height: auto;
 
 }
 .team .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 30px;
 }
-
 
 .team-text {
-  width: 635px;
-  height: 272px;
-  margin-left: 30px;
+padding-top: 124px;
 }
+
 .team-text_title {
-  font-size: 60px;
-  }
-  .team-text_about {
-    margin-top: 20px;
-    font-size: 18px;
-    width: 635px;
-    height: 108px;
-  }
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.team-text_about {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 150%;
+
+}
 .team-text_photo {
+  margin-top: 20px;
   height: auto;
   width: auto;
 }
 
-/*Наша команда*/
+
+/*Подвал */
 .footer {
 background-color: #E1EDE6;
 margin-top: 70px;
+padding-bottom: 10px;
+
 
 }
 
 .footer .container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   padding-top: 23px;
+
 }
 
+.footer img {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+
+.footer-nav {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3; 
+}
+
+.footer-contacts {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  margin-top: -30px;
+}
+
+.footer-social {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  justify-self: end;
+}
 
 .footer-contacts h3 {
   margin-top: 35px;
@@ -312,20 +371,18 @@ margin-top: 70px;
   color:#2C2D35;
 }
 
-
-
 .footer li  {
   margin-top: 7px;
   
 }
 
+
 .footer-nav__list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
   font-size: 20px;
 }
-
-
 
 .footer-social p {
   font-size: 12px;
@@ -337,6 +394,477 @@ margin-top: 70px;
   font-size: 18px;
   color:#86928B;
 }
-/* 
-Адаптация, которой еще нет, но я скоро разберусь
-  */
+
+/* Адаптация  */
+@media (max-width:479px) {
+  .container {
+    max-width: 80%;
+  }
+  .header {
+  padding: 0px;
+  }
+  .header .container {
+    grid-template-rows: repeat(2, 1fr);
+  }  
+  .header img {
+    grid-area: 1 / 1 / 2 / 4;
+    justify-self: center;
+    padding-top: 18px;
+  }
+  .header_nav {
+    display: none;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+.dropbtn {
+  background-image: url(./icons/btnMenu.png);
+  background-color: transparent;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F5F5F5;
+  min-width: 117px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  padding: 10px 16px;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #E1EDE6;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  .header_list {
+    gap:10px;
+  }
+  .image-button {
+    grid-area: 2 / 3 / 3 / 4; 
+  }
+  
+  .welcome {
+    margin-top: 60px;
+  }
+  .welcome img {
+    display: none;
+  }
+  .welcome_text {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  h1 {
+    font-size: 30px;
+    line-height: 100%;
+  }
+  .welcome p {
+    font-size: 14px;
+    padding-top: 20px;
+    line-height: 150%;
+  }  
+  .btn {
+    margin-top: 40px;
+    height: 50px;
+    width: 154px;
+  }
+  .reproduction {
+    margin-top: 50px;
+  }
+  .reproduction-menu {
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .reproduction-country {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .active {
+    grid-template-columns: 1fr;
+  } 
+
+  .reproduction-card img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+  .reproduction-autor, .reproduction-characteristic {
+    font-size: 16px;
+  }
+  .reproduction-name {
+    font-size: 24px;
+  }
+  .reproduction-price {
+    font-size: 20px;
+  }
+  .btn-by {
+    max-width: 250px;
+    height: 50px;
+    font-size: 18px;
+  }
+  .collection {
+    background-image: url(.//otherpicture/collection576.png);
+  }
+  .collection-star h4 {
+      font-size: 24px;
+      max-width: 261px;
+      font-weight: 500;
+    }
+  .collection-star_subtitle1, .collection-star_subtitle2 {
+    line-height: 140%;
+    font-weight: 500;
+  }
+  .collection a {
+    max-width: 290px;
+    height: 50px;
+    margin-top: 30px;
+    justify-self: center;
+  }
+  
+  .team {
+    margin-top: 60px;
+  }
+  .team .container {
+    grid-template-columns: 1fr;
+  } 
+  .team-text {
+    margin-top: 30px;
+    margin-left: 0px;
+    padding-top: 0;
+  }
+  .team-text h2 {
+    font-size: 24px;
+    line-height: 110%;
+  }  
+  .team-text p {
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 500;
+  } 
+  
+  .footer .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+    }    
+  .footer img {
+      grid-area: 1 / 1 / 2 / 3; 
+      justify-self: center;
+    }
+  .footer-contacts {
+      grid-area: 2 / 1 / 3 / 2; 
+      margin-top: 0;
+  }
+  .footer-contacts h3 {
+    font-size: 16px;
+    margin-top: 0;
+  }
+  .footer-contacts a {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .footer-nav {
+    grid-area: 2 / 1 / 4 / 3;
+  }  
+  .footer-nav__list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+.footer li {
+  margin-top: 0px;
+}
+.footer nav ul li:first-child {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.footer nav ul li:nth-child(2) {
+  grid-area: 2 / 1 / 3 / 2;
+} 
+.footer nav ul li:last-child {
+  grid-area: 2 / 2 / 3 / 3;
+}
+  .footer-social {
+    grid-area: 4 / 1 / 5 / 3;
+    justify-self: center;
+  } 
+  .footer-social img {
+    display: block;
+    justify-self: center;
+  }
+  .footer-social p {
+    display: inline;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+.container {
+  max-width: 85%;
+}
+.header .container {
+  grid-template-rows: repeat(2, 1fr);
+}  
+.header img {
+  grid-area: 1 / 1 / 2 / 4;
+  justify-self: center;
+}
+.header_nav {
+  grid-area: 2 / 1 / 3 / 3;
+  justify-self: center;
+}
+
+.header_list {
+  gap:10px;
+}
+.image-button {
+  grid-area: 2 / 3 / 3 / 4; 
+}
+
+.welcome {
+  margin-top: 50px;
+}
+.welcome img {
+  display: none;
+}
+.welcome_text {
+  grid-area: 1 / 1 / 2 / 3;
+}
+h1 {
+  font-size: 36px;
+  line-height: 100%;
+}
+.welcome p {
+  font-size: 16px;
+  padding-top: 10px;
+}  
+.btn {
+  margin-top: 11px;
+  height: 50px;
+  width: 178px;
+}
+.reproduction {
+  margin-top: 50px;
+}
+.reproduction-menu {
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+.reproduction-country {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.active {
+  grid-template-columns: 1fr 1fr;
+} 
+.reproduction-card img {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reproduction-autor, .reproduction-characteristic {
+  font-size: 16px;
+}
+.reproduction-name {
+  font-size: 24px;
+}
+.reproduction-price {
+  font-size: 20px;
+}
+.btn-by {
+  max-width: 200px;
+  height: 50px;
+  font-size: 18px;
+}
+.collection {
+  background-image: url(.//otherpicture/collection576.png);
+}
+.collection-star h4 {
+    font-size: 24px;
+    max-width: 261px;
+    font-weight: 500;
+  }
+.collection-star_subtitle1, .collection-star_subtitle2 {
+  line-height: 140%;
+  font-weight: 500;
+}
+.collection a {
+  width: 190px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.team {
+  margin-top: 50px;
+}
+.team .container {
+  grid-template-columns: 1fr;
+} 
+.team-text {
+  margin-top: 30px;
+  margin-left: 0px;
+  padding-top: 0;
+}
+.team-text h2 {
+  font-size: 24px;
+  line-height: 110%;
+}  
+.team-text p {
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 500;
+} 
+
+.footer .container {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  }    
+.footer img {
+    grid-area: 1 / 1 / 2 / 2; 
+  }
+.footer-contacts {
+    grid-area: 1 / 2 / 2 / 3; 
+    justify-self: end;
+    margin-top: 0;
+}
+.footer-contacts h3 {
+  margin-top: 0;
+}
+.footer-nav {
+  grid-area: 2 / 1 / 3 / 3;
+}  
+
+.footer-social {
+  grid-area: 3 / 1 / 4 / 3;
+  justify-self: center;
+} 
+.footer-social img {
+  display: block;
+  justify-self: center;
+}
+.footer-social p {
+  display: inline;
+}
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+.container {
+  max-width: 90%;
+  }
+
+h1 {
+  font-size: 40px;
+  line-height: 100%;
+  }
+  
+.btn {
+  margin-top: 40px;
+  height: 60px;
+  width: 210px;
+  }
+.active {
+  grid-template-columns: 1fr 1fr;
+  }
+
+.reproduction {
+  margin-top: 50px;
+  }
+
+.reproduction-card img {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.collection-wrapper {
+  max-width: 690px;
+}
+
+.collection-star h4 {
+  font-size: 30px;
+  max-width: 370px;
+  font-weight: 500;
+}
+.collection-star_subtitle1, .collection-star_subtitle2 {
+  line-height: 150%;
+  font-weight: 500;
+}
+.team .container {
+  grid-template-columns: 1fr;
+  }
+
+.team-text {
+  margin-top: 40px;
+  margin-left: 0px;
+  padding-top: 0;
+  }
+.team-text h2 {
+  font-size: 30px;
+  line-height: 110%;
+}  
+.team-text p {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 500;
+} 
+.footer .container {
+  grid-template-columns: 1fr 1fr;
+}    
+.footer-nav {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  margin: auto 75px 0 auto;
+}  
+.footer-contacts {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.footer-social {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  justify-self: start;
+}
+.footer-social img {
+  margin-bottom: 10px;
+}
+  }
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+.container {
+  max-width: 90%;
+  }
+.reproduction {
+  margin-top: 50px;
+  }
+
+.reproduction-card img {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.collection a {
+  margin-top: 40px;
+}
+.team-text {
+  padding-top: 65px;
+}
+}
+
+
+
+ 
+  
